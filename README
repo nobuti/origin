@@ -1,0 +1,1 @@
+### Bootstrap sinatra app for rapid prototyping purposes.
