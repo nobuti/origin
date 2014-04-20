@@ -1,0 +1,41 @@
+// *************************************
+//
+//   Base
+//   -> Base-level tags (body, p, etc.)
+//
+// *************************************
+
+html {
+  font-size: $base-font-size;
+  overflow-x: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: $base-background;
+  color: $base-color;
+  font-family: $base-font-family;
+  font-size: 100%;
+  font-smoothing: antialiased;
+  line-height: $base-line-height;
+}
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+p {
+  font-size: rem($base-font-size);
+}
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}

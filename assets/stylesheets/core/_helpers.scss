@@ -1,0 +1,110 @@
+// *************************************
+//
+//   Helpers
+//   -> Extends, Functions, Mixins, Animations
+//
+// *************************************
+
+// -------------------------------------
+//   Extends
+// -------------------------------------
+
+// ----- Debug ----- //
+
+%debug {
+  background-color: orange !important;
+}
+
+// ----- Ellipsis ----- //
+
+%ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// ----- Image Replacement ----- //
+
+%ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  &:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 150%;
+  }
+}
+
+%ghost-vertical-align {
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; 
+    width: .1px;
+  }
+}
+
+%vertical-align {
+  @include transform(translate(-50%, -50%));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+} 
+
+%centered {
+  @include transform(translate(-50%, 0));
+  position: relative;
+  left: 50%;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.animation-fix {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+
+// -------------------------------------
+//   Functions
+// -------------------------------------
+
+// ----- em ----- //
+
+@function em($target, $context: $base-font-size){
+  @if $target == 0 {
+    @return 0;
+  } @else {
+    @return #{$target / $context}em;
+  }
+}
+// ----- rem ----- //
+
+@function rem($size){
+  @return #{$size / $base-font-size}rem;
+}
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+// ----- Respond-to ----- //
+
+@mixin respond-to($val, $query: min-width, $media: screen) {
+  @media #{$media} and ($query: $val){
+    @content;
+  }
+}
+
+// -------------------------------------
+//   Animations
+// -------------------------------------
+

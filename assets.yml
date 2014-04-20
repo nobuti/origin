@@ -1,0 +1,15 @@
+gzip_assets: off
+javascript_compressor: uglifier
+ 
+javascripts:
+  public/javascript/modernizr:
+    - assets/javascript/modernizr.js
+
+  public/javascript/application.min:
+    - assets/javascript/vendor/jquery.js
+    - assets/javascript/vendor/jquery.pubsub.js
+    - assets/javascript/application.js
+ 
+stylesheets:
+  public/stylesheets/application.min:
+    - public/stylesheets/application.css

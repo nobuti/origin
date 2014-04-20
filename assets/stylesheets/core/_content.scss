@@ -1,0 +1,124 @@
+// *************************************
+//
+//   Content
+//   -> Typography
+//
+// *************************************
+
+@include font-face(proxima-nova, '/fonts/proximanova-regular-webfont', normal);
+@include font-face(proxima-nova, '/fonts/proximanova-semibold-webfont', bold);
+@include font-face(proxima-nova-light, '/fonts/proximanova-light-webfont', normal);
+
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'icons';
+    src: url(font_path('icons.svg#icons') format('svg');
+  }
+}
+*/
+
+[class^="pic-"]:after, [class*=" pic-"]:after {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  //speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+   /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+   /* you can be more comfortable with increased icons size */
+   /* font-size: 120%; */
+
+   /* Uncomment for 3D effect */
+   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.pic-play-2:after { content: '\66'; } /* 'f' */
+.pic-pause-2:after { content: '\65'; } /* 'e' */
+.pic-play-1:after { content: '\64'; } /* 'd' */
+.pic-pause-1:after { content: '\63'; } /* 'c' */
+.pic-play:after { content: '\62'; } /* 'b' */
+.pic-pause:after { content: '\61'; } /* 'a' */
+.pic-play-3:after { content: '\68'; } /* 'h' */
+.pic-pause-3:after { content: '\67'; } /* 'g' */
+
+
+// -------------------------------------
+//   Headings
+// -------------------------------------
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: $c-header-font-family;
+  font-weight:600;
+}
+
+h1, .c-h1, %c-h1 {
+  font-size: rem(40px);
+}
+
+h2, .c-h2, %c-h2 {
+  font-size: rem(24px);
+  margin-bottom: $base-whitespace + 6;
+}
+
+h3, .c-h3, %c-h3 {
+  color: $grey;
+  font-size: rem(21px);
+  font-weight:normal;
+}
+
+h4, .c-h4, %c-h4 {
+  font-size: rem(18px);
+}
+
+h5, .c-h5, %c-h5 {
+  font-size: rem(20px);
+}
+
+h6, .c-h6, %c-h6 {
+  font-size: rem(16px);
+}
+
+
+.loading {
+  background: transparent url(/images/spinner.gif) no-repeat center left !important;
+  color:transparent !important;
+}
+
+//--------------------------------------
+//   Icons
+//--------------------------------------
+
+[class^="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// -------------------------------------
+//   Page wrapper
+// -------------------------------------
+
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}

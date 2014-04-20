@@ -4,16 +4,23 @@ gem 'sinatra', require: 'sinatra/base'
 gem 'thin'
 gem 'foreman'
 
-gem 'haml'
-gem 'slim'
-gem 'redcarpet'
-
 gem 'json', '~> 1.7.7'
+gem 'rake'
 
-group :development, :test do
+group :development do
+  # For concatenation/compression
+  gem 'jammit'
+  gem 'uglifier'
+   
+  # Guard and plugins
+  gem 'guard'
+  gem 'guard-sass'
+  gem 'guard-jammit'
   gem 'guard-livereload'
   gem 'rack-livereload'
-  gem 'guard-coffeescript'
-  gem 'guard-compass'
-  gem 'compass'
+
+  # Sprites
+  gem 'sprite-factory'
+  gem 'rmagick', '2.13.2'
+
 end

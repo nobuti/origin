@@ -1,0 +1,60 @@
+/**
+ * Fluid and nestable grid system, e.g.:
+ *
+   <div class="grid">
+
+       <div class="column one-third">
+           <p>One third grid</p>
+       </div><!--
+
+    --><div class="column two-thirds">
+           <p>Two thirds grid</p>
+       </div><!--
+
+    --><div class="column one-half">
+           <p>One half grid</p>
+       </div><!--
+
+    --><div class="column one-quarter">
+           <p>One quarter grid</p>
+       </div><!--
+
+    --><div class="column one-quarter">
+           <p>One quarter grid</p>
+       </div>
+
+   </div>
+ *
+ *
+ */
+
+
+/**
+ * Grid wrapper
+ */
+.grid {
+  margin-left: -$base-spacing;
+  font-size: 0;
+  list-style:none;
+  margin-bottom:0;
+}
+
+
+    /**
+     * Very infrequently occuring grid wrappers as children of grid wrappers.
+     */
+    .grid > .grid {
+      margin-left:0;
+    }
+
+
+    /**
+     * Grid
+     */
+    .column {
+      display:inline-block;
+      font-size: $base-font-size;
+      padding-left: $base-spacing;
+      vertical-align:top;
+      //width: 100%;
+    }

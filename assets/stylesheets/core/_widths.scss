@@ -1,0 +1,58 @@
+/**
+ * Sizes in human readable format. These are used in conjunction with other
+ * objects and abstractions found in inuit.css, most commonly the grid system
+ * and faux flexbox.
+ *
+ * We have a mixin to generate our widths and their breakpoint-specific
+ * variations.
+ */
+
+@mixin grid-setup($namespace: "") {
+    /**
+    * Whole
+    */
+    .#{$namespace}one-whole         { width:100%; }
+
+
+    /**
+    * Halves
+    */
+    .#{$namespace}one-half          { width:50%; }
+
+
+    /**
+    * Thirds
+    */
+    .#{$namespace}one-third         { width:33.333%; }
+    .#{$namespace}two-thirds        { width:66.666%; }
+
+
+    /**
+    * Quarters
+    */
+    .#{$namespace}one-quarter       { width:25%; }
+    .#{$namespace}two-quarters      { @extend .#{$namespace}one-half; }
+    .#{$namespace}three-quarters    { width:75%; }
+
+
+    /**
+    * Fifths
+    */
+    .#{$namespace}one-fifth         { width:20%; }
+    .#{$namespace}two-fifths        { width:40%; }
+    .#{$namespace}three-fifths      { width:60%; }
+    .#{$namespace}four-fifths       { width:80%; }
+
+
+    /**
+    * Sixths
+    */
+    .#{$namespace}one-sixth         { width:16.666%; }
+    .#{$namespace}two-sixths        { @extend .#{$namespace}one-third; }
+    .#{$namespace}three-sixths      { @extend .#{$namespace}one-half; }
+    .#{$namespace}four-sixths       { @extend .#{$namespace}two-thirds; }
+    .#{$namespace}five-sixths       { width:83.333%; }
+
+}
+
+@include grid-setup();

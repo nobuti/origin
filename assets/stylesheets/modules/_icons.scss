@@ -1,0 +1,22 @@
+/*
+
+        Creating a sprite from following images:
+        
+        assets/icons/logo.png (155x22)
+        assets/icons/arrow-left.png (39x76)
+        assets/icons/arrow-right.png (39x76)
+        assets/icons/soundset.png (48x48)
+
+        Output files:
+          public/images/icons.png
+          assets/stylesheets/modules/_icons.scss
+
+        Output size:
+          155x98
+
+
+*/
+.icon-logo { width: 155px; height: 22px; background: url(/images/icons.png) 0px 0px no-repeat; }
+.icon-arrow-left { width: 39px; height: 76px; background: url(/images/icons.png) 0px -22px no-repeat; }
+.icon-arrow-right { width: 39px; height: 76px; background: url(/images/icons.png) -39px -22px no-repeat; }
+.icon-soundset { width: 48px; height: 48px; background: url(/images/icons.png) -78px -22px no-repeat; }
