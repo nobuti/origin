@@ -20,7 +20,7 @@ class App < Sinatra::Application
   end
 
   not_found do
-   erb '404'.to_sym
+   erb '404'.to_sym, :layout => false
   end
 
 end

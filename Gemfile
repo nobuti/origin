@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'sinatra', require: 'sinatra/base'
 gem 'thin'
 gem 'foreman'
-
+gem 'erubis'
 gem 'json', '~> 1.7.7'
 gem 'rake'
 
